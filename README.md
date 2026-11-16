@@ -1,16 +1,16 @@
 # builder-exp
 
-## skill-builder
+## skill-forge
 
 A Claude Code skill for creating and improving other skills. It lives in
-`.claude/skills/skill-builder/` and is available in any session opened on this repo.
+`.claude/skills/skill-forge/` and is available in any session opened on this repo.
 
-**Use it** by typing `/skill-builder`, optionally followed by what you want, or just
-ask in plain words:
+**It runs only when you call it.** Type `/skill-forge`, optionally followed by what you
+want. It never starts on its own, even if you ask for a skill in plain words.
 
-- "Create a skill that drafts our release notes"
-- "Turn what we just did into a skill"
-- "My weekly-metrics skill isn't triggering — fix it"
+- `/skill-forge a skill that drafts our release notes`
+- `/skill-forge turn what we just did into a skill`
+- `/skill-forge .claude/skills/weekly-metrics isn't triggering — fix it`
 
 **What it does:** interviews you about the skill, picks a pattern (coding workflow,
 data and analysis, or tool integration), drafts it, runs a structural check, tests it
@@ -31,5 +31,5 @@ on three realistic prompts in a fresh context, and refines it from the results.
 Run the check on any skill folder:
 
 ```bash
-python3 .claude/skills/skill-builder/scripts/validate_skill.py .claude/skills/<skill-name>
+python3 .claude/skills/skill-forge/scripts/validate_skill.py .claude/skills/<skill-name>
 ```

@@ -119,7 +119,8 @@ def validate(skill_dir):
                 "and when to use it, with the user's own phrases"
             )
         low = desc.lower()
-        if not any(cue in low for cue in TRIGGER_CUES):
+        command_only = fm.get("disable-model-invocation", "").lower() == "true"
+        if not command_only and not any(cue in low for cue in TRIGGER_CUES):
             warnings.append("description does not say when to use the skill (e.g. 'Use when ...')")
         if re.search(r"\b(I|my|you|your)\b", desc):
             warnings.append("description should be in the third person (avoid I / you)")

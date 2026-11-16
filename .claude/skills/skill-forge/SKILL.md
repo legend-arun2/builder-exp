@@ -1,10 +1,11 @@
 ---
-name: skill-builder
-description: Creates new Claude Code skills and improves existing ones through an interview, draft, validate, test and refine workflow. Use when the user asks to create, build or write a skill, to turn a workflow or the current conversation into a skill, to improve or debug an existing skill, or says a skill is not triggering or not being followed. Covers coding-workflow, data-analysis and tool-integration skills. Not for one-off tasks that will never repeat, or for hooks, settings and CLAUDE.md edits.
+name: skill-forge
+description: Creates new Claude Code skills and improves existing ones through an interview, draft, validate, test and refine workflow, for coding-workflow, data-analysis and tool-integration skills. Runs only when invoked with /skill-forge.
 argument-hint: "[what the skill should do | path to an existing skill]"
+disable-model-invocation: true
 ---
 
-# Skill Builder
+# Skill Forge
 
 Build a skill that triggers when it should, stays out of the way when it should not, and
 produces the result the user actually wants. Skills fail in three common ways, and every
